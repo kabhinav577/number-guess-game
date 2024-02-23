@@ -1,25 +1,30 @@
-import { Image, View, StyleSheet, Text } from 'react-native';
+import { Image, View, StyleSheet, Text, ImageBackground } from 'react-native';
 import Title from '../components/ui/Title';
 import PrimaryButton from '../components/ui/PrimaryButton';
 import Colors from '../constants/color';
 
 const GameOverScreen = ({ roundsNumber, userNumber, onStartNewGame }) => {
   return (
-    <View style={styles.rootContainer}>
-      <Title>Game Over!</Title>
-      <View style={styles.imageContainer}>
-        <Image
-          source={require('../assets/images/success.png')}
-          style={styles.image}
-        />
+    <ImageBackground
+      source={require('../assets/images/victory.gif')}
+      style={styles.rootContainer}
+    >
+      <View style={styles.rootContainer}>
+        <Title>Game Over!</Title>
+        <View style={styles.imageContainer}>
+          <Image
+            source={require('../assets/images/success.png')}
+            style={styles.image}
+          />
+        </View>
+        <Text style={styles.summaryText}>
+          Your phone needed <Text style={styles.highlight}>{roundsNumber}</Text>{' '}
+          rounds to guess the number{' '}
+          <Text style={styles.highlight}>{userNumber}</Text>.
+        </Text>
+        <PrimaryButton onPress={onStartNewGame}>Start New Game</PrimaryButton>
       </View>
-      <Text style={styles.summaryText}>
-        Your phone needed <Text style={styles.highlight}>{roundsNumber}</Text>{' '}
-        rounds to guess the number{' '}
-        <Text style={styles.highlight}>{userNumber}</Text>.
-      </Text>
-      <PrimaryButton onPress={onStartNewGame}>Start New Game</PrimaryButton>
-    </View>
+    </ImageBackground>
   );
 };
 
