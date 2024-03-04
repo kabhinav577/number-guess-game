@@ -13,9 +13,9 @@ Welcome to the Number Guess Game - a simple mobile game built with React Native.
 
 Include a few screenshots or GIFs demonstrating the app's user interface and key features.
 
-<img src="./screenshots/home.png" alt="Home Screen" width="300" height="500" />
-<img src="./screenshots/guess-screen.png" alt="Adding Todo Screen" width="300" height="500" />
-<img src="./screenshots/victory-screen.png" alt="Adding Todo Screen" width="300" height="500" />
+<img src="./screenshots/home.png" alt="Home Screen" width="250" height="500" />
+<img src="./screenshots/guess-screen.png" alt="Adding Todo Screen" width="250" height="500" />
+<img src="./screenshots/victory-screen.png" alt="Adding Todo Screen" width="250" height="500" />
 
 ## Acknowledgements
 
